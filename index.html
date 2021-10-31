@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>foodapp</title>
+    <title>index</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/a74ff16413.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body>)
     <header>
         <a href="#" class="logo">Hunger<span>.</span></a>
+        <div class="menutoggle" onclick="togglemenu();"></div>
         <ul class="navigation">
-            <li><a href="#banner">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#hotel">Hotel</a></li>
-            <li><a href="#review">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#banner" onclick="togglemenu();">Home</a></li>
+            <li><a href="#about" onclick="togglemenu();">About</a></li>
+            <li><a href="#menu" onclick="togglemenu();">Menu</a></li>
+            <li><a href="#hotel" onclick="togglemenu();">Hotel</a></li>
+            <li><a href="#review" onclick="togglemenu();">Reviews</a></li>
+            <li><a href="#contact" onclick="togglemenu();">Contact</a></li>
         </ul>
     </header>
     <section class="banner" id="banner">
@@ -209,6 +210,13 @@
             const header = document.querySelector('header');
             header.classList.toggle("sticky", window.scrollY > 0);
         });
+
+        function togglemenu() {
+            const menutoggle = document.querySelector('.menutoggle');
+            const navigation = document.querySelector('.navigation');
+            menutoggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
     </script>
 </body>
 

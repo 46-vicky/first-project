@@ -372,3 +372,81 @@
         font-weight: 500;
         text-decoration: none;
     }
+    
+    @media (max-width:991px) {
+        header,
+        header.sticky {
+            padding: 20px 20px;
+        }
+        header .navigation {
+            display: none;
+        }
+        header .navigation.active {
+            width: 100%;
+            height: calc(100% -68px);
+            position: fixed;
+            top: 68px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #fff;
+        }
+        header .navigation li {
+            margin-left: 0;
+        }
+        header .navigation li a {
+            text-decoration: none;
+            color: #111;
+            font-size: 1.6rem;
+        }
+        .menutoggle {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: url(../images/menu.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+        .menutoggle.active {
+            background: url(../images/close.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+        }
+        .banner .content h2 {
+            font-size: 3rem;
+            color: #fff;
+        }
+        .row {
+            flex-direction: column;
+        }
+        .row .col1 {
+            position: relative;
+            width: 100%;
+        }
+        .row .col1 .imgbox {
+            height: 300px;
+            margin-top: 20px;
+        }
+        .menu .content {
+            margin-top: 20px;
+        }
+        .menu .content .box {
+            margin: 10px;
+        }
+    }
+    
+    @media(max-width:480px) {
+        .banner .content h2 {
+            font-size: 2.2rem;
+            color: #fff;
+        }
+    }
